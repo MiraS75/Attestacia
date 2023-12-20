@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "6c2e05a8-10d8-465a-b822-04bce1c0bd27",
+		"name": "YouTube",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19011405",
+		"_collection_link": "https://www.postman.com/dark-shadow-923240/workspace/youtube/collection/19011405-6c2e05a8-10d8-465a-b822-04bce1c0bd27?action=share&source=collection_link&creator=19011405"
+	},
+	"item": [
+		{
+			"name": "Получить список видео по id jifUJrYPZQQ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/videos?id={{id}}",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"videos"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{id}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Поставить like видео с id jifUJrYPZQQ",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "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",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "16930457174-rse3heuiku6bph08cc26gc8b22jcqf75.apps.googleusercontent.com",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Google Oauth",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "queryParams",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "https://www.googleapis.com/auth/youtube.force-ssl",
+							"type": "string"
+						},
+						{
+							"key": "state",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.google.com/o/oauth2/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.google.com/o/oauth2/auth",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://www.googleapis.com/youtube/v3/videos/rate?id=jifUJrYPZQQ&rating=like",
+					"protocol": "https",
+					"host": [
+						"www",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"videos",
+						"rate"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "jifUJrYPZQQ"
+						},
+						{
+							"key": "rating",
+							"value": "like"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получить список самых популярных видео",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "clientSecret",
+							"value": "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",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "16930457174-rse3heuiku6bph08cc26gc8b22jcqf75.apps.googleusercontent.com",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "Google Oauth",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "queryParams",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "https://www.googleapis.com/auth/youtube.force-ssl",
+							"type": "string"
+						},
+						{
+							"key": "state",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.google.com/o/oauth2/token",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.google.com/o/oauth2/auth",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US",
+					"protocol": "https",
+					"host": [
+						"youtube",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"youtube",
+						"v3",
+						"videos"
+					],
+					"query": [
+						{
+							"key": "part",
+							"value": "snippet%2CcontentDetails%2Cstatistics"
+						},
+						{
+							"key": "chart",
+							"value": "mostPopular"
+						},
+						{
+							"key": "regionCode",
+							"value": "US"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "in",
+				"value": "query",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "AIzaSyDxqZkeZCkw7FudgqsxYVzoxyWA7G12O6M",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "key",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "jifUJrYPZQQ",
+			"type": "string"
+		},
+		{
+			"key": "client ID",
+			"value": "138295073898-s0i83nmg5irvoopalq6j8tu9o89p2hev.apps.googleusercontent.com",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "clientSecrets",
+			"value": "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",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
